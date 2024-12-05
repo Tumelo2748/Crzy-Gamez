@@ -196,11 +196,17 @@ export const SocialPost: React.FC<SocialPostProps> = ({ post, onNotification }) 
                 value={commentInput}
                 onChange={(e) => setCommentInput(e.target.value)}
                 placeholder="Add a comment... (it will be auto-corrected)"
-                className="flex-1 px-4 py-2 bg-white border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="flex-1 px-4 py-2 bg-white text-gray-800 placeholder-gray-400 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-base"
+                style={{ WebkitAppearance: 'none' }}
               />
               <button
                 type="submit"
-                className="px-4 py-2 bg-purple-500 text-white rounded-full hover:bg-purple-600 transition-colors"
+                disabled={!commentInput.trim()}
+                className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
+                  commentInput.trim()
+                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:opacity-90 active:scale-95'
+                    : 'bg-gray-100 text-gray-400'
+                }`}
               >
                 Post
               </button>
