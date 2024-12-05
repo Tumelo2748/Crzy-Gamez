@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { UncatchableButton } from './UncatchableButton';
 import Confetti from 'react-confetti';
 
 export const UncatchablePage: React.FC = () => {
-  const [attempts, setAttempts] = useState(0);
   const [gameStarted, setGameStarted] = useState(false);
   const [timeElapsed, setTimeElapsed] = useState(0);
   const [bestTime, setBestTime] = useState<number | null>(null);
@@ -41,7 +40,6 @@ export const UncatchablePage: React.FC = () => {
   const handleStart = () => {
     setGameStarted(true);
     setTimeElapsed(0);
-    setAttempts(0);
     setShowConfetti(false);
   };
 
