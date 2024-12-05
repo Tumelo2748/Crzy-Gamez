@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import GuessWrong from '../../components/games/GuessWrong';
 
 interface GameCard {
   title: string;
