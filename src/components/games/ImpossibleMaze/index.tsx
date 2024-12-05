@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useWindowSize } from 'react-use';
 
-const GRID_SIZE = 10;
-const CELL_SIZE = 40;
+// const GRID_SIZE = 10;
+// const CELL_SIZE = 40;
 
 interface Position {
   x: number;
@@ -65,9 +65,9 @@ const ImpossibleMaze: React.FC = () => {
     if (px > 0) newWalls[py][px-1] = false; 
     if (px < GRID_SIZE-1) newWalls[py][px+1] = false; 
     
-    const newFakeExits = [];
+    const newFakeExits: Position[] = [];
     for (let i = 0; i < 3; i++) {
-      let fx, fy;
+      let fx: number, fy: number;
       do {
         fx = Math.floor(Math.random() * GRID_SIZE);
         fy = Math.floor(Math.random() * GRID_SIZE);
@@ -85,7 +85,7 @@ const ImpossibleMaze: React.FC = () => {
   };
 
   const moveExit = useCallback(() => {
-    let newX, newY;
+    let newX: number, newY: number;
     do {
       newX = Math.floor(Math.random() * GRID_SIZE);
       newY = Math.floor(Math.random() * GRID_SIZE);

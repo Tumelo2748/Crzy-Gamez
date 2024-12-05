@@ -67,6 +67,14 @@ const games: GameCard[] = [
     emoji: "🌀",
     difficulty: "Impossible",
     color: "from-indigo-500 to-blue-500"
+  },
+  {
+    title: "Patience Tester 3000",
+    description: "Think you're patient? This game will prove you wrong.",
+    path: "/patience-tester",
+    emoji: "⏳",
+    difficulty: "Spicy",
+    color: "from-yellow-500 to-red-500"
   }
 ];
 

@@ -8,6 +8,7 @@ import { RoastChatPage } from './pages/RoastChatPage';
 import GravityFormPage  from './pages/GravityFormPage';
 import GuessWrongPage from './pages/GuessWrongPage';
 import ImpossibleMazePage from './pages/ImpossibleMazePage';
+import PatienceTesterPage from './pages/PatienceTesterPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/gravity-form" element={<GravityFormPage />} />
           <Route path="/guess-wrong" element={<GuessWrongPage />} />
           <Route path="/impossible-maze" element={<ImpossibleMazePage />} />
+          <Route path="/patience-tester" element={<PatienceTesterPage />} />
         </Routes>
       </PageLayout>
     </Router>
