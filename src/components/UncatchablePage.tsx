@@ -29,13 +29,13 @@ export const UncatchablePage: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer: number;
     if (gameStarted) {
-      timer = setInterval(() => {
+      timer = window.setInterval(() => {
         setTimeElapsed(prev => prev + 1);
       }, 1000);
     }
-    return () => clearInterval(timer);
+    return () => window.clearInterval(timer);
   }, [gameStarted]);
 
   const handleStart = () => {
