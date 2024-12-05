@@ -6,6 +6,8 @@ import { UncatchablePage } from './components/UncatchablePage';
 import { SocialMediaPage } from './pages/SocialMediaPage';
 import { RoastChatPage } from './pages/RoastChatPage';
 import GravityFormPage  from './pages/GravityFormPage';
+import GuessWrongPage from './pages/GuessWrongPage';
+import ImpossibleMazePage from './pages/ImpossibleMazePage';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/social" element={<SocialMediaPage />} />
           <Route path="/roast" element={<RoastChatPage />} />
           <Route path="/gravity-form" element={<GravityFormPage />} />
+          <Route path="/guess-wrong" element={<GuessWrongPage />} />
+          <Route path="/impossible-maze" element={<ImpossibleMazePage />} />
         </Routes>
       </PageLayout>
     </Router>

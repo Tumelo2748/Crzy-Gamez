@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import GuessWrong from '../../components/games/GuessWrong';
 
 interface GameCard {
   title: string;
   description: string;
   path: string;
   emoji: string;
-  difficulty: 'Easy' | 'Medium' | 'Hard' | 'Chaos' | 'Spicy';
+  difficulty: 'Easy' | 'Medium' | 'Hard' | 'Chaos' | 'Spicy' | 'Impossible';
   color: string;
 }
 
@@ -50,6 +51,22 @@ const games: GameCard[] = [
     emoji: '🌍',
     difficulty: 'Medium',
     color: 'from-purple-500 to-indigo-500'
+  },
+  {
+    title: 'Guess the Wrong Answer',
+    description: 'A quiz where every "wrong" answer is actually correct. Think outside the box!',
+    path: '/guess-wrong',
+    emoji: '🤔',
+    difficulty: 'Medium',
+    color: 'from-yellow-500 to-green-500'
+  },
+  {
+    title: "Impossible Maze",
+    description: "Try to escape a maze that really doesn't want you to win. Good luck!",
+    path: "/impossible-maze",
+    emoji: "🌀",
+    difficulty: "Impossible",
+    color: "from-indigo-500 to-blue-500"
   }
 ];
 
@@ -93,6 +110,7 @@ export const LandingPage: React.FC = () => {
                       game.difficulty === 'Medium' ? 'bg-yellow-500' :
                       game.difficulty === 'Hard' ? 'bg-red-500' :
                       game.difficulty === 'Chaos' ? 'bg-purple-500' :
+                      game.difficulty === 'Impossible' ? 'bg-blue-500' :
                       'bg-orange-500'}`}
                   >
                     {game.difficulty}
